@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import menu from "./images/menu.png";
+import Search from "./images/search.jpg";
+import Cart from "./images/cart.jpg";
+import User from "./images/user.jpg";
+import Searchblack from "./images/search-black.jpg";
 
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -24,7 +28,7 @@ function Navbar() {
       </div>
 
       {/* Navbar */}
-      <nav className="sticky top-0 bg-white z-20 border-b border-gray-200 py-1 px-1">
+      <nav className="sticky top-0 bg-white z-20 py-1 px-1">
         <div className="flex relative max-w-7xl mx-auto items-center justify-between md:justify-start py-5 md:py-7  px-4 xl:px-0">
           
           {/* Left Section (Logo + Mobile Menu) */}
@@ -122,6 +126,31 @@ function Navbar() {
               </li>
             </ul>
           </nav>
+          <div className="input-group focus-within:shadow-lg pl-4 transition-all relative items-center w-full rounded-full overflow-hidden hidden md:flex bg-[#F0F0F0] mr-3 lg:mr-10">
+            <div className="input-group-text mr-3">
+              <img src={Search} alt="search" width="20" height="20" className="min-w-5 min-h-5 bg-transparent" />
+            </div>
+            <input type="search" name="search" placeholder="Search for products..." autoComplete="off" autoCorrect="off" spellCheck="false" className="input-control w-full py-3 pr-4 outline-none placeholder:font-normal placeholder:text-sm bg-transparent placeholder:text-black/40"/>
+          </div>
+          <div className="flex items-center">
+            {/* Mobile Search */}
+            <a className="block md:hidden mr-[14px] p-1" href="/search">
+              <img src={Searchblack} alt="search" width="100" height="100" className="max-w-[22px] max-h-[22px]" />
+            </a>
+
+            {/* Cart with Badge */}
+            <a className="relative mr-[14px] p-1" href="/cart">
+              <img src={Cart} alt="cart" width="100" height="100" className="max-w-[22px] max-h-[22px]"/>
+              <span className="border bg-black text-white rounded-full px-1 text-xs absolute -top-3 left-1/2 -translate-x-1/2">
+                0
+              </span>
+            </a>
+            {/* User Profile */}
+            <a className="p-1" href="/#signin">
+              <img src={User} alt="user" width="100" height="100" className="max-w-[22px] max-h-[22px]"/>
+            </a>
+          </div>
+
         </div>
       </nav>
     </>
