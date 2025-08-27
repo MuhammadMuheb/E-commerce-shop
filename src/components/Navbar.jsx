@@ -13,23 +13,23 @@ function Navbar() {
   return (
     <>
       {/* Top Banner */}
-      <div className="bg-black text-white text-center py-2 px-2 sm:px-4 xl:px-0 h-[36px]">
-        <div className="relative max-w-7xl mx-auto left-[-13px] leading-6 sm:leading-5">
+      <div className="bg-black text-white text-center py-2 px-2 sm:px-4 xl:px-0 md-h[auto]">
+        <div className="relative max-w-7xl mx-auto leading-6 sm:leading-5">
           <p className="text-xs sm:text-[.880rem]  font-['Satoshi_Neue',_Satoshi,_Arial,_sans-serif] leading-6 sm:leading-5">
             Sign up and get 20% off to your first order.{" "}
             <a className="underline font-medium" href="#">
               Sign Up Now
             </a>
           </p>
-          <button className="absolute top-1/2 -translate-y-1/2 p-1 text-xl hidden sm:flex button">
+          <button className="items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:text-accent-foreground hover:bg-transparent absolute right-0 top-1/2 -translate-y-1/2 w-fit h-fit p-1 hidden sm:flex button">
             <IoMdClose />
           </button>
         </div>
       </div>
 
       {/* Navbar */}
-      <nav className="sticky top-0 bg-white z-20 py-1 px-1">
-        <div className="flex relative max-w-7xl mx-auto items-center justify-between md:justify-start py-5 md:py-7  px-4 xl:px-0">
+      <nav className="top-0 bg-white z-20 py-1 px-1">
+        <div className="flex max-w-[1240px]  relative mx-auto items-center justify-between md:justify-start py-5 md:py-5  px-4 xl:px-0">
           
           {/* Left Section (Logo + Mobile Menu) */}
           <div className="flex items-center">
@@ -150,7 +150,6 @@ function Navbar() {
               <img src={User} alt="user" width="100" height="100" className="max-w-[22px] max-h-[22px]"/>
             </a>
           </div>
-
         </div>
       </nav>
     </>

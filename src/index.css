@@ -11,3 +11,11 @@ html{
 left: 1230px;
 font-size:20px;
 }
+.home-h2{
+  opacity: 1; 
+  transform: none;
+}
+.home-p{
+  opacity: 1; 
+  transform: none;
+}
