@@ -8,7 +8,6 @@ html{
 }
 
 .button{
-left: 1230px;
 font-size:20px;
 }
 .home-h2{
@@ -18,4 +17,12 @@ font-size:20px;
 .home-p{
   opacity: 1; 
   transform: none;
+}
+.home-bg-img{
+  background-image: url('../public/images/homepage.png');
+}
+@media (max-width: 769px) {
+  .home-bg-img{
+    background-image: url('../public/images/header-homepage.png');
+  }
 }

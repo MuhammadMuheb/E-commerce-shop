@@ -55,8 +55,8 @@ function Home() {
                 </section>
                 
                 {/* Right Section (Image + Stars) */}
-                <section className="text-left relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat bg-[url('/images/header-homepage.png')] md:bg-[url('/images/homepage.png')]">
-                
+                <section className="relative md:px-4 min-h-[448px] md:min-h-[428px] bg-cover bg-top xl:bg-[center_top_-1.6rem] bg-no-repeat home-bg-img">
+
                 <img src={Bigstar} alt="big star"
                     className="absolute right-7 xl:right-0 top-12 max-w-[76px] max-h-[76px] lg:max-w-24 xl:max-w-[104px] xl:max-h-[104px] animate-[spin_4s_infinite]" />
 
