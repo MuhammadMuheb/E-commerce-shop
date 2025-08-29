@@ -52,7 +52,6 @@ function NewArrivals() {
   return (
     <>
     <section className="max-w-[1240px] mx-auto text-center my-10 md:my-20 px-4 md:px-0">
-      {/* Section Title */}
       <h2 className="text-[35px] md:text-5xl mb-8 md:mb-14 capitalize font-bold">  
         NEW ARRIVALS
       </h2>
@@ -61,32 +60,18 @@ function NewArrivals() {
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex space-x-4 sm:space-x-5 px-4 xl:px-0">
               {products.map((product) => (
-                <div
-                  key={product.id}
-                  className="shrink-0 w-[198px] sm:w-[295px]"
-                >
+                <div key={product.id} className="shrink-0 w-[198px] sm:w-[295px]">
                   <a href={product.link} className="flex flex-col items-start">
-                    {/* Product Image */}
                     <div className="bg-[#F0EEED] rounded-[13px] lg:rounded-[20px] w-full aspect-square mb-2.5 xl:mb-4 overflow-hidden">
-                      <img
-                        src={product.img}
-                        alt={product.title}
-                        className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500"
-                      />
+                      <img src={product.img} alt={product.title} className="rounded-md w-full h-full object-contain hover:scale-110 transition-all duration-500" />
                     </div>
-
-                    {/* Title */}
                     <strong className="text-black xl:text-xl">{product.title}</strong>
-
-                    {/* Rating */}
                     <div className="flex items-center mb-2">
                       <Rating value={product.rating} precision={0.5} readOnly />
                       <span className="text-black text-sm ml-2">
                         {product.rating}/5
                       </span>
                     </div>
-
-                    {/* Price Section */}
                     <div className="flex items-center space-x-[5px] xl:space-x-2.5">
                       <span className="font-bold text-black text-xl xl:text-2xl">
                         ${product.price}
