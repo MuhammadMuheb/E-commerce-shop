@@ -50,6 +50,7 @@ const products = [
 
 function NewArrivals() {
   return (
+    <>
     <section className="max-w-[1240px] mx-auto text-center my-10 md:my-20 px-4 md:px-0">
       {/* Section Title */}
       <h2 className="text-[35px] md:text-5xl mb-8 md:mb-14 capitalize font-bold">  
@@ -114,6 +115,10 @@ function NewArrivals() {
           </a>
         </div>
     </section>
+    <div className="max-w-[1240px] mx-auto px-4 xl:px-0">
+      <hr className="h-[1px] border-t-black/10 my-10 sm:my-16" />
+    </div>
+    </>
   );
 }
 

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import NewArrivals from './components/NewArrivals';
 import TopSelling from './components/TopSelling';
+import DressStyle from './components/DressStyle';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <Home />
     <NewArrivals />
     <TopSelling />
+    <DressStyle />
     </>
   );
 }

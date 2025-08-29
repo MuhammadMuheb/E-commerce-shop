@@ -21,6 +21,18 @@ font-size:20px;
 .home-bg-img{
   background-image: url('../public/images/homepage.png');
 }
+.Bg-casual{
+  background-image: url('../public/images/dress-style-1.png');
+}
+.Bg-formal{
+  background-image: url('../public/images/dress-style-2.png');
+}
+.Bg-party{
+  background-image: url('../public/images/dress-style-3.png');
+}
+.Bg-gym{
+  background-image: url('../public/images/dress-style-4.png');
+}
 @media (max-width: 769px) {
   .home-bg-img{
     background-image: url('../public/images/header-homepage.png');
