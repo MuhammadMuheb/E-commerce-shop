@@ -1,46 +1,46 @@
 import React from "react";
 import Rating from '@mui/material/Rating';
-import Pic1 from "./images/pic1.jpg";
-import Pic2 from "./images/pic2.jpg";
-import Pic3 from "./images/pic3.jpg";
-import Pic4 from "./images/pic4.jpg";
+import Pic5 from "./images/pic5.jpg";
+import Pic6 from "./images/pic6.jpg";
+import Pic7 from "./images/pic7.jpg";
+import Pic8 from "./images/pic8.jpg";
 
 const products = [
   {
     id: 1,
-    title: "T-shirt with Tape Details",
-    img: Pic1,
-    price: 120,
-    oldPrice: null,
-    discount: null,
-    rating: 4.5,
+    title: "Vertical Striped Shirt",
+    img: Pic5,
+    price: 186,
+    oldPrice: 232,
+    discount: "-20%",
+    rating: 5,
     link: "/shop/product/1/T-shirt-with-Tape-Details",
   },
   {
     id: 2,
-    title: "Skinny Fit Jeans",
-    img: Pic2,
-    price: 208,
-    oldPrice: 260,
-    discount: "-20%",
-    rating: 3.5,
+    title: "Courage Graphic T-shirt",
+    img: Pic6,
+    price: 145,
+    oldPrice: null,
+    discount: null,
+    rating: 4,
     link: "/shop/product/2/Skinny-Fit-Jeans",
   },
   {
     id: 3,
-    title: "Chechered Shirt",
-    img: Pic3,
-    price: 180,
+    title: "Loose Fit Bermuda Shorts",
+    img: Pic7,
+    price: 80,
     oldPrice: null,
     discount: null,
-    rating: 4.5,
+    rating: 3,
     link: "/shop/product/3/Chechered-Shirt",
   },
   {
     id: 4,
-    title: "Casual Hoodie",
-    img: Pic4,
-    price: 150,
+    title: "Faded Skinny Jeans",
+    img: Pic8,
+    price: 210,
     oldPrice: null,
     discount: null,
     rating: 4.5,
@@ -48,12 +48,12 @@ const products = [
   },
 ];
 
-function NewArrivals() {
+function TopSelling() {
   return (
     <section className="max-w-[1240px] mx-auto text-center my-10 md:my-20 px-4 md:px-0">
       {/* Section Title */}
       <h2 className="text-[35px] md:text-5xl mb-8 md:mb-14 capitalize font-bold">  
-        NEW ARRIVALS
+        TOP SELLING
       </h2>
       <div style={{opacity: 1, transform: "none"}}>
         <div className="relative w-full mb-6 md:mb-9  border-t-black/10 my-10 sm:my-16 " aria-roledescription="carousel" role="region">
@@ -117,4 +117,4 @@ function NewArrivals() {
   );
 }
 
-export default NewArrivals;
+export default TopSelling;

@@ -28,8 +28,8 @@ function Navbar() {
       </div>
 
       {/* Navbar */}
-      <nav className="top-0 bg-white z-20 py-1 px-1">
-        <div className="flex max-w-[1240px]  relative mx-auto items-center justify-between md:justify-start py-5 md:py-5  px-4 xl:px-0">
+      <nav className="sticky top-0 bg-white z-20 py-1 px-1">
+        <div className=" flex max-w-[1240px]  relative mx-auto items-center justify-between md:justify-start py-5 md:py-5  px-4 xl:px-0">
           
           {/* Left Section (Logo + Mobile Menu) */}
           <div className="flex items-center">
