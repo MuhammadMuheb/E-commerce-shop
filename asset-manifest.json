@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/E-commerce-shop/static/css/main.cd147a74.css",
-    "main.js": "/E-commerce-shop/static/js/main.d94ef780.js",
+    "main.css": "/E-commerce-shop/static/css/main.2a8537bb.css",
+    "main.js": "/E-commerce-shop/static/js/main.6bbb69b7.js",
     "static/js/453.026fca28.chunk.js": "/E-commerce-shop/static/js/453.026fca28.chunk.js",
     "static/media/homepage.png": "/E-commerce-shop/static/media/homepage.36e39fd1af323bf51c7e.png",
     "static/media/header-homepage.png": "/E-commerce-shop/static/media/header-homepage.7d14c3d84b0ea7fbaf0b.png",
+    "static/media/dress-style-3.png": "/E-commerce-shop/static/media/dress-style-3.d1fb3737551acdef431c.png",
+    "static/media/dress-style-2.png": "/E-commerce-shop/static/media/dress-style-2.a4475d514c1b1bbe1c66.png",
+    "static/media/dress-style-1.png": "/E-commerce-shop/static/media/dress-style-1.93ed278ebbb1f5b4e720.png",
+    "static/media/dress-style-4.png": "/E-commerce-shop/static/media/dress-style-4.4b6fc129fcbd2bf53460.png",
     "static/media/big-star.jpg": "/E-commerce-shop/static/media/big-star.10e2a50fe0fd6191ad1b.jpg",
     "index.html": "/E-commerce-shop/index.html",
-    "main.cd147a74.css.map": "/E-commerce-shop/static/css/main.cd147a74.css.map",
-    "main.d94ef780.js.map": "/E-commerce-shop/static/js/main.d94ef780.js.map",
+    "main.2a8537bb.css.map": "/E-commerce-shop/static/css/main.2a8537bb.css.map",
+    "main.6bbb69b7.js.map": "/E-commerce-shop/static/js/main.6bbb69b7.js.map",
     "453.026fca28.chunk.js.map": "/E-commerce-shop/static/js/453.026fca28.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd147a74.css",
-    "static/js/main.d94ef780.js"
+    "static/css/main.2a8537bb.css",
+    "static/js/main.6bbb69b7.js"
   ]
 }
