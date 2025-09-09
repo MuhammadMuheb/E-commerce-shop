@@ -1,0 +1,180 @@
+
+{
+  "products": [
+  {
+    "id": 1,
+    "title": "T-shirt with Tape Details",
+    "img": "pic1.jpg",
+    "price": 120,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "High quality cotton t-shirt with tape details."
+  },
+  {
+    "id": 2,
+    "title": "Skinny Fit Jeans",
+    "img": "pic2.jpg",
+    "price": 208,
+    "oldPrice": 260,
+    "discount": "-20%",
+    "rating": 3.5,
+    "description": "Skinny fit jeans with stretchable fabric."
+  },
+  {
+    "id": 3,
+    "title": "Chechered Shirt",
+    "img": "pic3.jpg",
+    "price": 180,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "Classic chechered shirt, perfect for casual wear."
+  },
+  {
+    "id": 4,
+    "title": "Casual Hoodie",
+    "img": "pic4.jpg",
+    "price": 150,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "Comfortable casual hoodie for daily wear."
+  }
+],
+"topselling": [
+  {
+    "id": 1,
+    "title": "Vertical Striped Shirt",
+    "img": "pic5.jpg",
+    "price": 186,
+    "oldPrice": 232,
+    "discount": "-20%",
+    "rating": 5,
+    "link": "/shop/product/1/T-shirt-with-Tape-Details"
+  },
+  {
+    "id": 2,
+    "title": "Courage Graphic T-shirt",
+    "img": "pic6.jpg",
+    "price": 145,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4,
+    "link": "/shop/product/2/Skinny-Fit-Jeans"
+  },
+  {
+    "id": 3,
+    "title": "Loose Fit Bermuda Shorts",
+    "img": "pic7.jpg",
+    "price": 80,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 3,
+    "link": "/shop/product/3/Chechered-Shirt"
+  },
+  {
+    "id": 4,
+    "title": "Faded Skinny Jeans",
+    "img": "pic8.jpg",
+    "price": 210,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "link": "/shop/product/4/Casual-Hoodie"
+  }
+ ],
+ "shoppage": [
+  {
+    "id": 1,
+    "title": "Gradient Graphic T-shirt",
+    "img": "pic9.png",
+    "price": 145,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 3.5,
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 2,
+    "title": "Polo with Tipping Details",
+    "img": "pic10.png",
+    "price": 180,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "This polo shirt with tipping details is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 3,
+    "title": "Black Striped T-shirt",
+    "img": "pic11.png",
+    "price": 105,
+    "oldPrice":150,
+    "discount": "-30%",
+    "rating": 5.0,
+    "description": "This black striped t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 4,
+    "title": "Skinny Fit Jeans",
+    "img": "pic2.jpg",
+    "price": 208,
+    "oldPrice": 260,
+    "discount": "-20%",
+    "rating": 4.2,
+    "description": "This skinny fit jeans which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 5,
+    "title": "Chechered Shirt ",
+    "img": "pic3.jpg",
+    "price": 180,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "This chechered shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 6,
+    "title": "Sleeve Striped T-shirt",
+    "img": "pic4.jpg",
+    "price": 112,
+    "oldPrice": 160,
+    "discount": "-30%",
+    "rating": 4.5,
+    "description": "This sleeve striped t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 7,
+    "title": "Courage Graphic T-shirt",
+    "img": "pic6.jpg",
+    "price": 145,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.0,
+    "description": "This courage graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 8,
+    "title": "Loose Fit Bermuda Shorts",
+    "img": "pic7.jpg",
+    "price": 80,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 3.0,
+    "description": "This loose fit bermuda shorts is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 9,
+    "title": "Faded Skinny Jeans",
+    "img": "pic8.jpg",
+    "price": 210,
+    "oldPrice": null,
+    "discount": null,
+    "rating": 4.5,
+    "description": "This faded skinny jeans is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  }
+]
+}

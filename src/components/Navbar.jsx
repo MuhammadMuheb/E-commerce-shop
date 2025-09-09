@@ -9,7 +9,7 @@ import Searchblack from "./images/search-black.jpg";
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false); 
-  const [shopOpen, setShopOpen] = useState(false); 
+  const [shoppageOpen, setshoppageOpen] = useState(false); 
 
   return (
     <>
@@ -39,10 +39,10 @@ function Navbar() {
               SHOP.CO
             </a>
           </div>
-          <nav className="relative z-10 flex-1 hidden md:flex mr-2 lg:mr-7 justify-center">
-            <ul className="flex items-center space-x-4">
+          <nav className="relative z-10 max-w-max flex-1 items-center justify-center hidden md:flex mr-2 lg:mr-7">
+            <ul className="group flex flex-1 list-none items-center justify-center space-x-1">
               <li className="relative">
-                <button onClick={() => setDropdownOpen(!dropdownOpen)} className="inline-flex items-center px-3 py-2 text-sm">
+                <button onClick={() => setDropdownOpen(!dropdownOpen)} className="igroup inline-flex h-9 w-max items-center justify-center rounded-md bg-background py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 group font-normal px-3">
                   Shop{" "}
                   <FaAngleDown className={`ml-1 h-3 w-3 transition-transform ${dropdownOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -50,7 +50,7 @@ function Navbar() {
                   <div className="absolute left-0 top-full mt-1.5 bg-white shadow-lg rounded-md">
                     <ul className="grid w-[400px] md:w-[500px] lg:w-[600px] md:grid-cols-2 gap-3 p-4">
                       <li>
-                        <a href="/shop#men-clothes" className="block p-3 hover:bg-gray-100">
+                        <a href="/shoppage#men-clothes" className="block p-3 hover:bg-gray-100">
                           <div className="text-sm font-medium">Men's Clothes</div>
                           <p className="text-sm text-gray-500">
                             In attractive and spectacular colors and designs
@@ -58,7 +58,7 @@ function Navbar() {
                         </a>
                       </li>
                       <li>
-                        <a href="/shop#women-clothes" className="block p-3 hover:bg-gray-100">
+                        <a href="/shoppage#women-clothes" className="block p-3 hover:bg-gray-100">
                           <div className="text-sm font-medium">Women's Clothes</div>
                           <p className="text-sm text-gray-500">
                             Ladies, your style and tastes are important to us
@@ -66,7 +66,7 @@ function Navbar() {
                         </a>
                       </li>
                       <li>
-                        <a href="/shop#kids-clothes" className="block p-3 hover:bg-gray-100">
+                        <a href="/shoppage#kids-clothes" className="block p-3 hover:bg-gray-100">
                           <div className="text-sm font-medium">Kids Clothes</div>
                           <p className="text-sm text-gray-500">
                             For all ages, with happy and beautiful colors
@@ -74,7 +74,7 @@ function Navbar() {
                         </a>
                       </li>
                       <li>
-                        <a href="/shop#bag-shoes" className="block p-3 hover:bg-gray-100">
+                        <a href="/shoppage#bag-shoes" className="block p-3 hover:bg-gray-100">
                           <div className="text-sm font-medium">Bags & Shoes</div>
                           <p className="text-sm text-gray-500">
                             Suitable for men, women and all tastes and styles
@@ -85,17 +85,17 @@ function Navbar() {
                   </div>
                 )}
               </li>
-              <li><a href="/shop#on-sale" className="px-3 py-2 text-sm">On Sale</a></li>
-              <li><a href="/shop#new-arrivals" className="px-3 py-2 text-sm">New Arrivals</a></li>
-              <li><a href="/shop#brands" className="px-3 py-2 text-sm">Brands</a></li>
+              <li><a href="/shoppage#on-sale" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 font-normal px-3">On Sale</a></li>
+              <li><a href="/shoppage#new-arrivals" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 font-normal px-3">New Arrivals</a></li>
+              <li><a href="/shoppage#brands" className="group inline-flex h-9 w-max items-center justify-center rounded-md bg-background py-2 text-sm transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50 font-normal px-3">Brands</a></li>
             </ul>
           </nav>
-          <div className="hidden md:flex bg-[#F0F0F0] rounded-full px-4 mr-3 lg:mr-10 w-full max-w-sm items-center">
+          <div className="input-group focus-within:shadow-lg pl-4 transition-all relative items-center w-full rounded-full overflow-hidden hidden md:flex bg-[#F0F0F0] mr-3 lg:mr-10">
             <img src={Search} alt="search" width="20" height="20" className="mr-3"/>
             <input
               type="search"
               placeholder="Search for products..."
-              className="w-full py-3 bg-transparent outline-none placeholder:text-black/40"
+              className="input-control w-full py-3 pr-4 outline-none placeholder:font-normal placeholder:text-sm bg-transparent placeholder:text-black/40"
             />
           </div>
           <div className="flex items-center">
@@ -130,22 +130,22 @@ function Navbar() {
             </div>
             <div className="flex flex-col items-start space-y-4">
               <div className="w-full">
-                <button onClick={() => setShopOpen(!shopOpen)} className="flex w-full items-center justify-between text-base font-normal" >
+                <button onClick={() => setshoppageOpen(!shoppageOpen)} className="flex w-full items-center justify-between text-base font-normal" >
                   Shop
-                  <FaAngleDown className={`h-4 w-4 transition-transform ${ shopOpen ? "rotate-180" : "" }`} />
+                  <FaAngleDown className={`h-4 w-4 transition-transform ${ shoppageOpen ? "rotate-180" : "" }`} />
                 </button>
-                {shopOpen && (
+                {shoppageOpen && (
                   <div className="mt-2 pl-4 space-y-2 text-sm">
-                    <a href="/shop#men-clothes" className="block">Men’s Clothes</a>
-                    <a href="/shop#women-clothes" className="block">Women’s Clothes</a>
-                    <a href="/shop#kids-clothes" className="block">Kids Clothes</a>
-                    <a href="/shop#bag-shoes" className="block">Bags & Shoes</a>
+                    <a href="/shoppage#men-clothes" className="block">Men’s Clothes</a>
+                    <a href="/shoppage#women-clothes" className="block">Women’s Clothes</a>
+                    <a href="/shoppage#kids-clothes" className="block">Kids Clothes</a>
+                    <a href="/shoppage#bag-shoes" className="block">Bags & Shoes</a>
                   </div>
                 )}
               </div>
-              <a href="/shop#on-sale">On Sale</a>
-              <a href="/shop#new-arrivals">New Arrivals</a>
-              <a href="/shop#brands">Brands</a>
+              <a href="/shoppage#on-sale">On Sale</a>
+              <a href="/shoppage#new-arrivals">New Arrivals</a>
+              <a href="/shoppage#brands">Brands</a>
             </div>
           </div>
         </>

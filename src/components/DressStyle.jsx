@@ -10,18 +10,18 @@ function DressStyle() {
         BROWSE BY dress STYLE
       </h2>
       <div className="flex flex-col sm:flex-row md:h-[289px] space-y-4 sm:space-y-0 sm:space-x-5 mb-4 sm:mb-5" style={{ opacity: 1, transform: "none" }} >
-        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] Bg-casual" href="/shop#casual" >
+        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] Bg-casual" href="casual" >
           Casual
         </a>
-        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[684px] h-[190px] Bg-formal" href="/shop#formal">
+        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[684px] h-[190px] Bg-formal" href="formal">
           Formal
         </a>
       </div>
       <div className="flex flex-col sm:flex-row md:h-[289px] space-y-5 sm:space-y-0 sm:space-x-5" style={{ opacity: 1, transform: "none" }}>
-        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[684px] h-[190px] Bg-party" href="/shop#party">
+        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[684px] h-[190px] Bg-party" href="party">
           Party
         </a>
-        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] Bg-gym" href="/shop#gym">
+        <a className="w-full md:h-full rounded-[20px] bg-white bg-top text-2xl md:text-4xl font-bold text-left py-4 md:py-[25px] px-6 md:px-9 bg-no-repeat bg-cover md:max-w-[260px] lg:max-w-[360px] xl:max-w-[407px] h-[190px] Bg-gym" href="gym">
           Gym
         </a>
       </div>

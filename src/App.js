@@ -1,24 +1,23 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import EchoLayout from './layout/EchoLayout';
 import Home from './components/Home';
-import NewArrivals from './components/NewArrivals';
-import TopSelling from './components/TopSelling';
-import DressStyle from './components/DressStyle';
-import Footer from './components/Footer';
-
+import ShopPage from './components/ShopPage';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
-    <>
-    <Navbar />
-    <Home />
-    <NewArrivals />
-    <TopSelling />
-    <DressStyle />
-    <Footer />
-    </>
+    <Router>
+      <Routes>
+        {/* Parent Layout */}
+        <Route path="/" element={<EchoLayout />}>
+          <Route index element={<Home />} />
+          <Route path="shoppage" element={<ShopPage />} />
+          <Route path="product/:id" element={<ProductDetails />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
