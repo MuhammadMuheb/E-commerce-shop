@@ -73,7 +73,7 @@ function OurHappyCustomers() {
     <div className="relative mb-6 md:mb-9 mx-auto">
       {/* Heading + Arrows */}
       <div className="max-w-[1240px] m-auto flex justify-between px-4 xl:px-12 mb-6 md:mb-10">
-        <h2 className="text-[32px] leading-[36px] md:text-5xl capitalize font-bold">
+        <h2 className="leading-[36px] md:text-5xl capitalize  text-[35px] font-integral font-[900]">
           OUR HAPPY CUSTOMERS
         </h2>
         <div className="flex items-center space-x-2">

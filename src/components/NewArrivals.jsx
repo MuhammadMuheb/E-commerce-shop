@@ -7,7 +7,7 @@ function NewArrivals() {
   const products = productData.products;
   return (
     <section className="max-w-[1240px] mx-auto text-center my-10 md:my-20 px-4 md:px-0">
-      <h2 className="text-[35px] md:text-5xl mb-8 md:mb-14 capitalize font-bold">  
+      <h2 className="text-[35px] md:text-5xl mb-8 md:mb-14 font-integral  font-[900] vertical-alignment-middle">  
         NEW ARRIVALS
       </h2>
 

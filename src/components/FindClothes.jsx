@@ -14,7 +14,7 @@ function FindClothes() {
             <div className=" max-w-[1240px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 ">
                 {/* Left Section (Text + Button + Stats) */}
                 <section className="max-w-[1240px] px-4">
-                <h2 className=" text-4xl lg:text-[64px] lg:leading-[64px] mb-5 lg:mb-8 home-h2 font-extrabold">
+                <h2 className=" text-4xl lg:text-[64px] lg:leading-[64px] mb-5 lg:mb-8  font-integral font-[900]">
                     FIND CLOTHES THAT MATCHES YOUR STYLE
                 </h2>
                 <p className="text-black/60 text-sm lg:text-base mb-6 lg:mb-8 max-w-[545px] home-p">
@@ -28,20 +28,20 @@ function FindClothes() {
                 </div>
                 <div className="flex md:h-full md:max-h-11 lg:max-h-[52px] xl:max-h-[68px] items-center justify-center md:justify-start flex-wrap sm:flex-nowrap md:space-x-3 lg:space-x-6 xl:space-x-8 md:mb-[116px]">
                     <div className="flex flex-col">
-                    <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">200+</span>
-                    <span className="text-xs xl:text-base text-black/60 text-nowrap">International Brands</span>
+                    <span className="font-Satoshi font-[700] Vertical-alignment-Middle text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">200+</span>
+                    <span className="font-Satoshi text-xs xl:text-[14px] text-black/60 text-nowrap">International Brands</span>
                     </div>
                     <div className="shrink-0 w-[1px] ml-6 md:ml-0 h-12 md:h-full bg-black/10"></div>
 
                     <div className="flex flex-col ml-6 md:ml-0">
-                    <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">2,000+</span>
-                    <span className="text-xs xl:text-base text-black/60 text-nowrap">High-Quality Products</span>
+                    <span className="font-Satoshi font-[700] text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">2,000+</span>
+                    <span className="text-xs xl:text-[14px] text-black/60 text-nowrap">High-Quality Products</span>
                     </div>
                     <div className="shrink-0 h-full w-[1px] hidden sm:block sm:h-12 md:h-full ml-6 md:ml-0 bg-black/10"></div>
     
                     <div className="flex flex-col w-full text-center sm:w-auto sm:text-left mt-3 sm:mt-0 sm:ml-6 md:ml-0">
-                    <span className="font-bold text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">3,000+</span>
-                    <span className="text-xs xl:text-base text-black/60 text-nowrap">Happy Customers</span>
+                    <span className="font-Satoshi font-[700] text-2xl md:text-xl lg:text-3xl xl:text-[40px] xl:mb-2">30,000+</span>
+                    <span className="text-xs xl:text-[14px] text-black/60 text-nowrap">Happy Customers</span>
                     </div>
                 </div>
                 </section>

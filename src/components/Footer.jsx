@@ -38,7 +38,7 @@ function Footer() {
         <div className="max-w-[1240px] mx-auto">
           <nav className="lg:grid lg:grid-cols-12 mb-8">
             <div className="flex flex-col lg:col-span-3 lg:max-w-[248px]">
-              <h1 className="__className_931021 text-[28px] lg:text-[32px] mb-6">
+              <h1 className=" text-[33.45px] font-integral font-[900] lg:text-[32px] mb-6">
                 SHOP.CO
               </h1>
               <p className="text-black/60 text-sm mb-9">
@@ -65,7 +65,7 @@ function Footer() {
             </div>
             <div className="hidden lg:grid col-span-9 lg:grid-cols-4 lg:pl-10">
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium  font-[500] text-sm md:text-[16px] uppercase tracking-widest mb-6">
                   company
                 </h3>
                 <a className="capitalize text-black/60 text-sm md:text-base mb-4 w-fit" href="#" >
@@ -82,7 +82,7 @@ function Footer() {
                 </a>
               </section>
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium font-[500] text-sm md:text-[16px] uppercase tracking-widest mb-6">
                   help
                 </h3>
                 <a className="capitalize text-black/60 text-sm md:text-base mb-4 w-fit" href="#" >
@@ -99,7 +99,7 @@ function Footer() {
                 </a>
               </section>
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium font-[500] text-sm md:text-[16px] uppercase tracking-widest mb-6">
                   faq
                 </h3>
                 <a className="capitalize text-black/60 text-sm md:text-base mb-4 w-fit" href="#">
@@ -116,7 +116,7 @@ function Footer() {
                 </a>
               </section>
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium  font-[500] text-sm md:text-base uppercase tracking-widest mb-6">
                   resources
                 </h3>
                 <a className="text-black/60 text-sm md:text-base mb-4 w-fit" href="#">
@@ -135,7 +135,7 @@ function Footer() {
             </div>
             <div className="grid lg:hidden grid-cols-2 sm:grid-cols-4">
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium  font-[500] text-sm md:text-base uppercase tracking-widest mb-6">
                   company
                 </h3>
                 <a className="capitalize text-black/60 text-sm md:text-base mb-4 w-fit" href="#">
@@ -152,7 +152,7 @@ function Footer() {
                 </a>
               </section>
               <section className="flex flex-col mt-5">
-                <h3 className="font-medium text-sm md:text-base uppercase tracking-widest mb-6">
+                <h3 className="font-medium  font-[500] text-sm md:text-base uppercase tracking-widest mb-6">
                   help
                 </h3>
                 <a className="capitalize text-black/60 text-sm md:text-base mb-4 w-fit" href="#">

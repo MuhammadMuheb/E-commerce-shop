@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Rating from "@mui/material/Rating";
 import { Link } from "react-router-dom";
 import { BsSliders2Vertical , BsChevronRight , BsChevronUp,} from "react-icons/bs";
-import { GoArrowLeft , GoArrowRight } from "react-icons/go";
 import SidebarFilters from "./SidebarFilters";
 import productData from "./data/ProductData.json";
 
