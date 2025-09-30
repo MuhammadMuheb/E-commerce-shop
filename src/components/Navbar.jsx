@@ -36,7 +36,7 @@ function Navbar() {
             <div className="block md:hidden mr-4">
               <FaBars onClick={() => setSidebarOpen(true)} className="cursor-pointer max-w-[22px] max-h-[22px]" />
             </div>
-            <a className="text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10 font-black " href="/" >
+            <a className="text-2xl lg:text-[32px] mb-2 mr-3 lg:mr-10 font-black " href="/home" >
               SHOP.CO
             </a>
           </div>
@@ -103,7 +103,7 @@ function Navbar() {
             <a className="block md:hidden mr-[14px] p-1" href="/search">
               <img src={Searchblack} alt="search" className="max-w-[22px] max-h-[22px]" />
             </a>
-            <a className="relative mr-[14px] p-1" href="yourcart">
+            <a className="relative mr-[14px] p-1" href="/yourcart">
               <img src={Cart} alt="cart" className="max-w-[22px] max-h-[22px]"/>
               {totalItems > 0 && (
                 <span className="border bg-black text-white rounded-full px-1 text-xs absolute -top-3 left-1/2 -translate-x-1/2">
@@ -111,7 +111,7 @@ function Navbar() {
                 </span>
               )}
             </a>
-            <a className="p-1" href="/">
+            <a className="p-1" href="/home">
               <img src={User} alt="user" className="max-w-[22px] max-h-[22px]"/>
             </a>
           </div>
@@ -127,7 +127,7 @@ function Navbar() {
               <IoMdClose />
             </button>
             <div className="mb-10">
-              <a className="text-2xl font-bold" href="/">
+              <a className="text-2xl font-bold" href="/home">
                 SHOP.CO
               </a>
             </div>
