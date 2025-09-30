@@ -8,15 +8,8 @@ import {
 import Slider from "@mui/material/Slider";
 import { FaCheck } from "react-icons/fa"; // tick icon
 
-function SidebarFilters() {
-
-  const categories = [
-    "T-shirts", 
-    "Shorts",
-    "Shirts",
-    "Hoodie", 
-    "Jeans"
-    ];
+function SidebarFilters({ isSidebarOpen, onClose }) {
+  const categories = ["T-shirts", "Shorts", "Shirts", "Hoodie", "Jeans"];
 
   const [value, setValue] = useState([0, 200]);
   const [openSections, setOpenSections] = useState({
@@ -63,35 +56,44 @@ function SidebarFilters() {
   };
 
   return (
-    <div className="hidden md:block min-w-[295px] max-w-[295px] border border-black/10 rounded-[20px] px-5 md:px-6 py-5 space-y-5 md:space-y-6">
+    <div
+      className={`
+        fixed inset-y-0 botton-0 z-50 w-72 transform bg-white shadow-lg transition-transform duration-300
+        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+        md:static md:translate-x-0 md:min-w-[295px] md:max-w-[295px] md:border md:border-black/10 md:rounded-[20px]
+        px-5 md:px-6 py-5 space-y-5 md:space-y-6
+      `}
+    >
+      {/* Header */}
       <div className="flex items-center justify-between">
         <span className="font-bold text-black text-xl">Filters</span>
-        <BsSliders2Vertical className="text-2xl text-black/40" />
+        <BsSliders2Vertical
+          onClick={onClose}
+          className="text-2xl text-black/40 cursor-pointer md:hidden"
+        />
       </div>
       <hr className="border-t-black/10" />
 
-      <div className="flex flex-col space-y-0.5 text-black/60">
-        {categories.map((cat) => (
-          <a key={cat} href="" className="flex items-center justify-between py-2" >
-            {cat}
-            <BsChevronRight className="text-lg text-black" style={{ fontSize: "10px" }} />
-          </a>
-        ))}
-      </div>
-      <hr className="border-t-black/10" />
-
+      {/* Price Filter */}
       <div>
         <div
           className="border-b border-none"
           onClick={() => toggleSection("price")}
         >
-          <h3 className="flex"><button className="flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 text-black font-bold text-xl hover:no-underline p-0 py-0.5">Price
-           {openSections.price ? <BsChevronUp style={{ fontSize: "13px" }} /> : <BsChevronDown style={{ fontSize: "13px" }} />}
-          </button></h3>
+          <h3 className="flex">
+            <button className="flex flex-1 items-center justify-between transition-all text-black font-bold text-xl p-0 py-0.5">
+              Price
+              {openSections.price ? (
+                <BsChevronUp style={{ fontSize: "13px" }} />
+              ) : (
+                <BsChevronDown style={{ fontSize: "13px" }} />
+              )}
+            </button>
+          </h3>
         </div>
 
         {openSections.price && (
-          <div className="text-sm font-bold data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down overflow-visible">
+          <div className="text-sm font-bold">
             <Slider
               value={value}
               onChange={handleChange}
@@ -100,7 +102,7 @@ function SidebarFilters() {
               max={250}
               sx={{ color: "black" }}
             />
-            <div className="flex justify-between ">
+            <div className="flex justify-between">
               <span>${value[0]}</span>
               <span>${value[1]}</span>
             </div>
@@ -112,13 +114,22 @@ function SidebarFilters() {
 
       {/* Colors */}
       <div>
-        <div className="border-b border-none" onClick={() => toggleSection("colors")}>
-          <h3 className="flex"><button className="flex flex-1 items-center justify-between transition-all [&[data-state=open]>svg]:rotate-180 text-black font-bold text-xl hover:no-underline p-0 py-0.5">Colors
-           {openSections.colors ? ( <BsChevronUp style={{ fontSize: "13px" }} /> ) : ( <BsChevronDown style={{ fontSize: "13px" }} /> )}
-          </button></h3>
+        <div
+          className="border-b border-none"
+          onClick={() => toggleSection("colors")}
+        >
+          <h3 className="flex">
+            <button className="flex flex-1 items-center justify-between text-black font-bold text-xl p-0 py-0.5">
+              Colors
+              {openSections.colors ? (
+                <BsChevronUp style={{ fontSize: "13px" }} />
+              ) : (
+                <BsChevronDown style={{ fontSize: "13px" }} />
+              )}
+            </button>
+          </h3>
         </div>
         {openSections.colors && (
-
           <div className="pt-4 grid grid-cols-5 gap-2.5">
             {colors.map((color, i) => (
               <button
@@ -128,7 +139,10 @@ function SidebarFilters() {
                 className={`${color} rounded-full w-9 sm:w-10 h-9 sm:h-10 flex items-center justify-center border border-black/20`}
               >
                 {selectedColor === color && (
-                  <FaCheck style={{ fontSize: "12px", }} className=" text-white" />
+                  <FaCheck
+                    style={{ fontSize: "12px" }}
+                    className="text-white"
+                  />
                 )}
               </button>
             ))}
@@ -194,7 +208,7 @@ function SidebarFilters() {
             {["Casual", "Formal", "Party", "Gym"].map((style) => (
               <a
                 key={style}
-                href=""
+                href="#"
                 className="flex items-center justify-between py-2 hover:text-black"
               >
                 {style}

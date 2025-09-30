@@ -1,11 +1,11 @@
 import React from "react";
-import Bigstar from "./images/big-star.jpg";
-import Smallstar from "./images/small-star.png";
-import Versace from "./images/versace-logo.png";
-import Zara from "./images/zara-logo.png";
-import Gucci from "./images/gucci-logo.png";
-import Prada from "./images/prada-logo.png";
-import CalvinKlein from "./images/calvin-klein-logo.png";
+import Bigstar from "../images/big-star.jpg";
+import Smallstar from "../images/small-star.png";
+import Versace from "../images/versace-logo.png";
+import Zara from "../images/zara-logo.png";
+import Gucci from "../images/gucci-logo.png";
+import Prada from "../images/prada-logo.png";
+import CalvinKlein from "../images/calvin-klein-logo.png";
 
 function FindClothes() {
   return (

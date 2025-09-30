@@ -18,7 +18,7 @@ const reviews = [
   {
     id: 2,
     name: "Sarah M.",
-    rating: 4,
+    rating: 5,
     icon: <FaCheckCircle className="text-[#01AB31] text-xl sm:text-2xl" />,
     text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
   },
@@ -39,7 +39,7 @@ const reviews = [
   {
     id: 5,
     name: "Samantha D.",
-    rating: 4,
+    rating: 5,
     icon: <FaCheckCircle className="text-[#01AB31] text-xl sm:text-2xl" />,
     text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
   },
@@ -55,25 +55,25 @@ const reviews = [
 function OurHappyCustomers() {
   const sliderRef = useRef(null);
 
-  const settings = {
-    infinite: true,
-    speed: 600,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: false, // arrows custom banaye hain
-    centerMode: true,
-    centerPadding: "0px",
-    responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2 } },
-      { breakpoint: 640, settings: { slidesToShow: 1 } },
-    ],
-  };
+const settings = {
+  infinite: true,
+  speed: 600,
+  slidesToShow: 3,
+  centerMode: true, 
+  centerPadding: "214px", 
+  arrows: false,
+  responsive: [
+    { breakpoint: 1280, settings: { slidesToShow: 3, centerPadding: "60px" } },
+    { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "40px" } },
+    { breakpoint: 640, settings: { slidesToShow: 1, centerPadding: "0px" } },
+  ],
+};
 
   return (
-    <div className="relative mb-6 md:mb-9 mx-auto">
+    <div className="relative mb-6 md:mb-9 lg:mb-12 xl:mb-16 2xl:mb-20">
       {/* Heading + Arrows */}
-      <div className="max-w-[1240px] m-auto flex justify-between px-4 xl:px-12 mb-6 md:mb-10">
-        <h2 className="leading-[36px] md:text-5xl capitalize  text-[35px] font-integral font-[900]">
+      <div className="flex justify-between px-4 xl:px-0 mb-6 md:mb-10 max-w-[1240px] mx-auto">
+        <h2 className="leading-[36px] md:text-5xl capitalize text-[35px] font-integral font-[900]">
           OUR HAPPY CUSTOMERS
         </h2>
         <div className="flex items-center space-x-2">
@@ -92,36 +92,31 @@ function OurHappyCustomers() {
         </div>
       </div>
 
-      {/* Slider with gradient edges */}
-      <div className="relative w-full mx-auto px-2">
-        {/* Left gradient */}
-        <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-        {/* Right gradient */}
-        <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
-
+      {/* Slider Container */}
+      <div className="relative">
         <Slider ref={sliderRef} {...settings}>
           {reviews.map((review) => (
-            <div key={review.id} className="px-2">
-              <div className="bg-white border border-black/10 rounded-[20px] p-6 sm:px-8 sm:py-7 h-full flex flex-col shadow-md">
-                {/* Rating */}
-                <div className="mb-3 sm:mb-4">
-                  <Rating name="read-only" value={review.rating} readOnly />
-                </div>
-                {/* Name + Icon */}
-                <div className="flex items-center mb-2 sm:mb-3">
-                  <strong className="text-black sm:text-xl mr-1">
-                    {review.name}
-                  </strong>
+            <div key={review.id} className="px-3">
+              <div className="border border-black/10 rounded-2xl p-6 sm:px-8 sm:py-7 min-h-[260px] bg-white flex flex-col justify-between">
+                <Rating name="read-only" value={review.rating} readOnly />
+                <div className="flex items-center mt-3">
+                  <strong className="text-black sm:text-xl mr-1">{review.name}</strong>
                   {review.icon}
                 </div>
-                {/* Review Text */}
-                <p className="text-sm sm:text-base text-black/60">
-                  {review.text}
-                </p>
+                <p className="text-sm sm:text-base text-black/60 mt-2">{review.text}</p>
               </div>
             </div>
           ))}
         </Slider>
+
+{/* Left light blur overlay */}
+<div className="pointer-events-none absolute left-0 top-0 h-full w-[220px] 
+                backdrop-blur-[2px] bg-white/5 z-10" />
+
+{/* Right light blur overlay */}
+<div className="pointer-events-none absolute right-0 top-0 h-full w-[220px] 
+                backdrop-blur-[2px] bg-white/5 z-10" />
+
       </div>
     </div>
   );

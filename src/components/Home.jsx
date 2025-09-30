@@ -1,11 +1,14 @@
-import React from "react";
-import FindClothes from "./FindClothes";
-import NewArrivals from "./NewArrivals";
-import TopSelling from "./TopSelling";
-import DressStyle from "./DressStyle";
-import OurHappyCustomers from "./OurHappyCustomers";
+import React , {useEffect} from "react";
+import FindClothes from "./home/FindClothes";
+import NewArrivals from "./home/NewArrivals";
+import TopSelling from "./home/topSelling";
+import DressStyle from "./home/DressStyle";
+import OurHappyCustomers from "./home/OurHappyCustomers";
 
 function Home() {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
     <>
     <FindClothes />

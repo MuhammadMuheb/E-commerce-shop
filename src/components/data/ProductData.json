@@ -1,6 +1,6 @@
 
 {
-  "products": [
+  "newarrivals": [
   {
     "id": 1,
     "title": "T-shirt with Tape Details",
@@ -10,7 +10,7 @@
     "oldPrice": null,
     "discount": null,
     "rating": 4.5,
-    "description": "High quality cotton t-shirt with tape details."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 2,
@@ -19,8 +19,9 @@
     "price": 208,
     "oldPrice": 260,
     "discount": "-20%",
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "rating": 3.5,
-    "description": "Skinny fit jeans with stretchable fabric."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 3,
@@ -29,18 +30,20 @@
     "price": 180,
     "oldPrice": null,
     "discount": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "rating": 4.5,
-    "description": "Classic chechered shirt, perfect for casual wear."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 4,
     "title": "Casual Hoodie",
     "img": "pic4.jpg",
     "price": 150,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "oldPrice": null,
     "discount": null,
     "rating": 4.5,
-    "description": "Comfortable casual hoodie for daily wear."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   }
 ],
 "topselling": [
@@ -50,9 +53,10 @@
     "img": "pic5.jpg",
     "price": 186,
     "oldPrice": 232,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": "-20%",
     "rating": 5,
-    "link": "/shop/product/1/T-shirt-with-Tape-Details"
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 2,
@@ -60,9 +64,10 @@
     "img": "pic6.jpg",
     "price": 145,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 4,
-    "link": "/shop/product/2/Skinny-Fit-Jeans"
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 3,
@@ -70,9 +75,10 @@
     "img": "pic7.jpg",
     "price": 80,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 3,
-    "link": "/shop/product/3/Chechered-Shirt"
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 4,
@@ -80,9 +86,10 @@
     "img": "pic8.jpg",
     "price": 210,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 4.5,
-    "link": "/shop/product/4/Casual-Hoodie"
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   }
  ],
  "shoppage": [
@@ -92,9 +99,10 @@
     "img": "pic9.png",
     "price": 145,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 3.5,
-    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 2,
@@ -102,9 +110,10 @@
     "img": "pic10.png",
     "price": 180,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 4.5,
-    "description": "This polo shirt with tipping details is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 3,
@@ -112,19 +121,21 @@
     "img": "pic11.png",
     "price": 105,
     "oldPrice":150,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": "-30%",
     "rating": 5.0,
-    "description": "This black striped t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 4,
     "title": "Skinny Fit Jeans",
     "img": "pic2.jpg",
     "price": 208,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "oldPrice": 260,
     "discount": "-20%",
     "rating": 4.2,
-    "description": "This skinny fit jeans which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 5,
@@ -132,9 +143,10 @@
     "img": "pic3.jpg",
     "price": 180,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 4.5,
-    "description": "This chechered shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 6,
@@ -142,9 +154,10 @@
     "img": "pic4.jpg",
     "price": 112,
     "oldPrice": 160,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": "-30%",
     "rating": 4.5,
-    "description": "This sleeve striped t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 7,
@@ -152,9 +165,10 @@
     "img": "pic6.jpg",
     "price": 145,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "discount": null,
     "rating": 4.0,
-    "description": "This courage graphic t-shirt is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 8,
@@ -163,8 +177,9 @@
     "price": 80,
     "oldPrice": null,
     "discount": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
     "rating": 3.0,
-    "description": "This loose fit bermuda shorts is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
   },
   {
     "id": 9,
@@ -172,9 +187,107 @@
     "img": "pic8.jpg",
     "price": 210,
     "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],    
     "discount": null,
     "rating": 4.5,
-    "description": "This faded skinny jeans is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  }
+],
+  "youmightalsolike": [
+  {
+    "id": 1,
+    "title": "Polo with Contrast Trims",
+    "img": "pic12.png",
+    "price": 194,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
+    "oldPrice": 242,
+    "discount": "-20%",
+    "rating": 4,
+    "description": "This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+    {
+    "id": 2,
+    "title": "Gradient Graphic T-shirt",
+    "img": "pic9.png",
+    "price": 145,
+    "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
+    "discount": null,
+    "rating": 3.5,
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 3,
+    "title": "Polo with Tipping Details",
+    "img": "pic10.png",
+    "price": 180,
+    "oldPrice": null,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
+    "discount": null,
+    "rating": 4.5,
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  },
+  {
+    "id": 4,
+    "title": "Black Striped T-shirt",
+    "img": "pic11.png",
+    "price": 105,
+    "colors": ["#4F4631", "#314F4A", "#31344F"],
+    "oldPrice":150,
+    "discount": "-30%",
+    "rating": 5.0,
+    "description":"This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style."
+  }
+
+],
+"reviewsData" : [
+  {
+    "id": 1,
+    "name": "Alex K.",
+    "rating": 5,
+    "text": "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+    "date": "August 14, 2023",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Sarah M.",
+    "rating": 5,
+    "text": "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+    "date": "August 15, 2023",
+    "verified": false
+  },
+  {
+    "id": 3,
+    "name": "Ethan R.",
+    "rating": 5,
+    "text": "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+    "date": "August 16, 2023",
+    "verified": false
+  },
+  {
+    "id": 4,
+    "name": "Olivia P.",
+    "rating": 5,
+    "text": "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+    "date": "August 17, 2023",
+    "verified": false
+  },
+  {
+    "id": 5,
+    "name": "Liam K.",
+    "rating": 5,
+    "text": "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+    "date": "August 18, 2023",
+    "verified": false
+  },
+  {
+    "id": 6,
+    "name": "Samantha D.",
+    "rating": 5,
+    "text": "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+    "date": "August 19, 2023",
+    "verified": false
   }
 ]
 }
