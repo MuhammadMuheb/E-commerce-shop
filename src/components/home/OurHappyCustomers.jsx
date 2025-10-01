@@ -13,6 +13,36 @@ const reviews = [
     rating: 5,
     text: "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
   },
+  {
+id: 2,
+name: "Sarah M.",
+rating: 5,
+text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+},
+{
+id: 3,
+name: "Ethan R.",
+rating: 5,
+text: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+},
+{
+id: 4,
+name: "Olivia P.",
+rating: 5,
+text: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+},
+{
+id: 5,
+name: "Samantha D.",
+rating: 5,
+text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+},
+{
+id: 6,
+name: "Sophia L.",
+rating: 5,
+text: "Absolutely love their collection! Highly recommend for anyone who values both style and comfort.",
+},
 ];
 
 function OurHappyCustomers() {
@@ -60,13 +90,13 @@ function OurHappyCustomers() {
           <div className="flex items-center space-x-1 ml-2">
             <button
               onClick={() => sliderRef.current?.slickPrev()}
-              className="inline-flex items-center justify-center rounded-md h-9 w-9 text-2xl hover:bg-gray-200"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
             >
               <FaArrowLeft />
             </button>
             <button
               onClick={() => sliderRef.current?.slickNext()}
-              className="inline-flex items-center justify-center rounded-md h-9 w-9 text-2xl hover:bg-gray-200"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
             >
               <FaArrowRight />
             </button>
