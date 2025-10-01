@@ -54,20 +54,20 @@ function OurHappyCustomers() {
   }, []);
 
   const settings = {
-    infinite: reviews.length > 1, // اگر صرف ایک card ہے تو infinite false
+    infinite: reviews.length > 1,
     speed: 600,
-    slidesToShow: reviews.length > 1 ? 3 : 1,
-    centerMode: reviews.length > 1, // صرف multiple cards کے لیے
-    centerPadding: "200px",
+    slidesToShow: reviews.length >= 3 ? 3 : reviews.length,
+    centerMode: reviews.length >= 3,
+    centerPadding: "0px",
     arrows: false,
     responsive: [
       {
         breakpoint: 1280,
-        settings: { slidesToShow: Math.min(3, reviews.length), centerPadding: "40px", centerMode: reviews.length > 1 },
+        settings: { slidesToShow: Math.min(3, reviews.length), centerMode: reviews.length >= 3, centerPadding: "20px" },
       },
       {
         breakpoint: 1024,
-        settings: { slidesToShow: Math.min(2, reviews.length), centerPadding: "20px", centerMode: reviews.length > 1 },
+        settings: { slidesToShow: Math.min(2, reviews.length), centerMode: reviews.length >= 2, centerPadding: "10px" },
       },
       {
         breakpoint: 768,
@@ -83,21 +83,13 @@ function OurHappyCustomers() {
   return (
     <section className="relative mb-10">
       <div className="flex justify-between items-center px-4 max-w-[1240px] mx-auto mb-6">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
-          OUR HAPPY CUSTOMERS
-        </h2>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">OUR HAPPY CUSTOMERS</h2>
         {mounted && reviews.length > 1 && (
           <div className="flex items-center space-x-1 ml-2">
-            <button
-              onClick={() => sliderRef.current?.slickPrev()}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
-            >
+            <button onClick={() => sliderRef.current?.slickPrev()} className="inline-flex items-center justify-center h-9 w-9 text-2xl rounded-md hover:bg-gray-200">
               <FaArrowLeft />
             </button>
-            <button
-              onClick={() => sliderRef.current?.slickNext()}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
-            >
+            <button onClick={() => sliderRef.current?.slickNext()} className="inline-flex items-center justify-center h-9 w-9 text-2xl rounded-md hover:bg-gray-200">
               <FaArrowRight />
             </button>
           </div>
@@ -105,10 +97,10 @@ function OurHappyCustomers() {
       </div>
 
       <div className="relative overflow-hidden">
-        <Slider ref={sliderRef} {...settings} className="overflow-visible">
+        <Slider ref={sliderRef} {...settings}>
           {reviews.map((review) => (
-            <div key={review.id} className="px-2 sm:px-3 w-full">
-              <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full max-w-full">
+            <div key={review.id} className="px-2 w-full">
+              <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full">
                 <Rating name="read-only" value={review.rating} readOnly className="text-yellow-400" />
                 <div className="flex items-center mt-3">
                   <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
