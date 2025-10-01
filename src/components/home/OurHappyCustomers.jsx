@@ -1,49 +1,64 @@
-import React from "react";
-import Slider from "react-slick";
-import { FaCheckCircle } from "react-icons/fa";
+import React, { useRef } from "react";
+import { FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Rating from "@mui/material/Rating";
+import Slider from "react-slick";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
   {
     id: 1,
-    name: "Olipiantha P.",
+    name: "Alex K.",
     rating: 5,
-    text: "Absolutely love it! Minimal, clean and very user friendly design.",
+    text: "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
   },
   {
     id: 2,
-    name: "John D.",
-    rating: 4,
-    text: "This website makes shopping so much easier, love the interface!",
+    name: "Sarah M.",
+    rating: 5,
+    text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
   },
   {
     id: 3,
-    name: "Sofia M.",
+    name: "Ethan R.",
     rating: 5,
-    text: "Superb experience, smooth checkout and great collection.",
+    text: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
   },
   {
     id: 4,
-    name: "Ali R.",
+    name: "Olivia P.",
     rating: 5,
-    text: "Highly recommend, the simplicity and speed is unmatched!",
+    text: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+  },
+  {
+    id: 5,
+    name: "Samantha D.",
+    rating: 5,
+    text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+  },
+  {
+    id: 6,
+    name: "Sophia L.",
+    rating: 5,
+    text: "Absolutely love their collection! Highly recommend for anyone who values both style and comfort.",
   },
 ];
 
-function CustomerReviews() {
+function OurHappyCustomers() {
+  const sliderRef = useRef(null);
+
   const settings = {
     infinite: true,
     speed: 600,
     slidesToShow: 3,
     centerMode: true,
-    centerPadding: "200px",
+    centerPadding: "120px",
     arrows: false,
     responsive: [
       {
         breakpoint: 1280,
-        settings: { slidesToShow: 3, centerPadding: "40px", centerMode: true },
+        settings: { slidesToShow: 3, centerPadding: "60px", centerMode: true },
       },
       {
         breakpoint: 1024,
@@ -54,7 +69,7 @@ function CustomerReviews() {
         settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
       },
       {
-        breakpoint: 480, 
+        breakpoint: 480, // ✅ fix for small phones
         settings: {
           slidesToShow: 1,
           centerMode: false,
@@ -66,17 +81,35 @@ function CustomerReviews() {
   };
 
   return (
-    <section className="relative max-w-[1240px] mx-auto px-4 md:px-8 py-16 text-center">
-      <h2 className="text-2xl md:text-3xl font-bold mb-10">
-        OUR HAPPY CUSTOMERS
-      </h2>
+    <section className="relative mb-10">
+      {/* Heading + Arrows */}
+      <div className="flex justify-between px-4 max-w-[1240px] mx-auto mb-6 items-center">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
+          OUR HAPPY CUSTOMERS
+        </h2>
+        {/* Desktop arrows only */}
+        <div className="hidden sm:flex items-center space-x-2">
+          <button
+            onClick={() => sliderRef.current.slickPrev()}
+            className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
+          >
+            <FaArrowLeft />
+          </button>
+          <button
+            onClick={() => sliderRef.current.slickNext()}
+            className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
+          >
+            <FaArrowRight />
+          </button>
+        </div>
+      </div>
 
+      {/* Slider */}
       <div className="relative">
-        <Slider {...settings}>
+        <Slider ref={sliderRef} {...settings}>
           {reviews.map((review) => (
-            <div key={review.id} className="px-2 sm:px-3 w-full min-w-0">
-              <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] text-left">
-                {/* Stars */}
+            <div key={review.id} className="px-2 sm:px-3 w-full">
+              <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full">
                 <Rating
                   name="read-only"
                   value={review.rating}
@@ -84,30 +117,22 @@ function CustomerReviews() {
                   className="text-yellow-400"
                   size="medium"
                 />
-
-                {/* Name + Verified */}
                 <div className="flex items-center mt-3">
                   <strong className="text-black sm:text-lg md:text-xl mr-2">
                     {review.name}
                   </strong>
                   <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
                 </div>
-
-                {/* Text */}
-                <p className="text-sm sm:text-base mt-2 text-black/70">
+                <p className="text-sm sm:text-base mt-2 text-black/70 break-words leading-relaxed">
                   {review.text}
                 </p>
               </div>
             </div>
           ))}
         </Slider>
-
-        {/* Blur Overlays → ✅ only desktop */}
-        <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-        <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
       </div>
     </section>
   );
 }
 
-export default CustomerReviews;
+export default OurHappyCustomers;
