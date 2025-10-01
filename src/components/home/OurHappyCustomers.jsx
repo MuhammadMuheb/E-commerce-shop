@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Rating from "@mui/material/Rating";
 import Slider from "react-slick";
@@ -47,6 +47,11 @@ const reviews = [
 
 function OurHappyCustomers() {
   const sliderRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const settings = {
     infinite: true,
@@ -69,12 +74,13 @@ function OurHappyCustomers() {
         settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
       },
       {
-        breakpoint: 480, 
-        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
-      },
-      {
-        breakpoint: 350,
-        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
+        breakpoint: 480, // ✅ iPhone 12 Mini fix
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+          centerPadding: "0px",
+          arrows: false, // mobile par arrows disable
+        },
       },
     ],
   };
@@ -86,20 +92,23 @@ function OurHappyCustomers() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
           OUR HAPPY CUSTOMERS
         </h2>
-        <div className="flex items-center space-x-2">
-          <button
-            onClick={() => sliderRef.current.slickPrev()}
-            className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
-          >
-            <FaArrowLeft />
-          </button>
-          <button
-            onClick={() => sliderRef.current.slickNext()}
-            className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
-          >
-            <FaArrowRight />
-          </button>
-        </div>
+        {/* Arrows only jab mounted ho */}
+        {mounted && (
+          <div className="hidden sm:flex items-center space-x-2">
+            <button
+              onClick={() => sliderRef.current?.slickPrev()}
+              className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              <FaArrowLeft />
+            </button>
+            <button
+              onClick={() => sliderRef.current?.slickNext()}
+              className="flex items-center justify-center h-9 w-9 text-xl sm:text-2xl rounded-md bg-gray-100 hover:bg-gray-200"
+            >
+              <FaArrowRight />
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Slider */}

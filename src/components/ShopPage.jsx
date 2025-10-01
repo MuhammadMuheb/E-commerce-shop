@@ -48,7 +48,7 @@ const ShopPage = () => {
       <nav className="mb-5 sm:mb-9">
         <ol className="flex flex-wrap items-center gap-1.5 text-sm text-muted-foreground sm:gap-2.5">
           <li className="inline-flex items-center gap-1.5">
-            <a href="/" className="transition-colors hover:text-foreground">
+            <a href="/home" className="transition-colors hover:text-foreground">
               Home
             </a>
           </li>

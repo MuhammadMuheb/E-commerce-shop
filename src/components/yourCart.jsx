@@ -18,7 +18,7 @@ function YourCart() {
         <nav aria-label="breadcrumb" className="mb-2 sm:mb-6">
           <ol className="flex flex-wrap items-center gap-1.5 text-sm sm:gap-2.5">
             <li className="inline-flex items-center gap-1.5">
-              <a className="hover:text-black" href="/">
+              <a className="hover:text-black" href="/home">
                 Home
               </a>
             </li>
