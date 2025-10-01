@@ -71,7 +71,6 @@ responsive: [
 return (
 <section className="relative mb-10">
     <div className="flex justify-between items-center px-4 max-w-[1240px] mx-auto mb-6">
-
     <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
     OUR HAPPY CUSTOMERS
     </h2>
@@ -96,22 +95,27 @@ return (
     {/* Slider */}
     <div className="relative overflow-hidden">
     <div className="flex-ml-4">
-    <Slider ref={sliderRef} {...settings} >
+    <Slider
+    ref={sliderRef}
+    {...settings}
+    className="overflow-visible"
+    >
     {reviews.map((review) => (
-    <div key={review.id} >
-    <div className="min-w-0 shrink-0 grow-0 basis-full w-full max-w-[358px] sm:max-w-[400px] pl-5 sm:pl-6 lg:max-w-none lg:pl-0">
-    <div className="flex flex-col items-start aspect-auto p-6 sm:px-7 sm:py-6 overflow-hidden h-full">
-    <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px]">
-    <Rating name="read-only" value={review.rating} readOnly className="text-yellow-400" />
-    <div className="flex items-center mt-3">
-    <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
-    <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
-    </div>
-    <p className="text-sm sm:text-base mt-2 text-black/70">{review.text}</p>
-    </div>
-    </div>
-    </div>
-    </div>
+        <div key={review.id} className="px-2 sm:px-3 w-full">
+        <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full">
+            <Rating
+            name="read-only"
+            value={review.rating}
+            readOnly
+            className="text-yellow-400"
+            />
+            <div className="flex items-center mt-3">
+            <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
+            <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
+            </div>
+            <p className="text-sm sm:text-base mt-2 text-black/70">{review.text}</p>
+        </div>
+        </div>
     ))}
     </Slider>
 
