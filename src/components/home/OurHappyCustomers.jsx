@@ -94,13 +94,13 @@ return (
     </div>
 
     {/* Slider */}
-    <div className="overflow-hidden">
-    <div className="flex -ml-4">
+    <div className="relative overflow-hidden">
+    <div className="flex-ml-4">
     <Slider ref={sliderRef} {...settings} >
     {reviews.map((review) => (
-    <div key={review.id} className="">
+    <div key={review.id} >
     <div className="min-w-0 shrink-0 grow-0 basis-full w-full max-w-[358px] sm:max-w-[400px] pl-5 sm:pl-6 lg:max-w-none lg:pl-0">
-    <div class="relative bg-white flex flex-col items-start aspect-auto border border-black/10 rounded-[20px] p-6 sm:px-8 sm:py-7 overflow-hidden h-full">
+    <div className="flex flex-col items-start aspect-auto p-6 sm:px-7 sm:py-6 overflow-hidden h-full">
     <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px]">
     <Rating name="read-only" value={review.rating} readOnly className="text-yellow-400" />
     <div className="flex items-center mt-3">
