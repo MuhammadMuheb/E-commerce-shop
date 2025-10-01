@@ -7,12 +7,42 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
-  { id: 1, name: "Alex K.", rating: 5, text: "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co." },
-  { id: 2, name: "Sarah M.", rating: 5, text: "I'm blown away by the quality and style of the clothes I received from Shop.co." },
-  { id: 3, name: "Ethan R.", rating: 5, text: "This t-shirt is a must-have for anyone who appreciates good design." },
-  { id: 4, name: "Olivia P.", rating: 5, text: "As a UI/UX enthusiast, I value simplicity and functionality." },
-  { id: 5, name: "Samantha D.", rating: 5, text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable." },
-  { id: 6, name: "Sophia L.", rating: 5, text: "Absolutely love their collection! Highly recommend for anyone who values both style and comfort." },
+  {
+    id: 1,
+    name: "Alex K.",
+    rating: 5,
+    text: "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.",
+  },
+  {
+    id: 2,
+    name: "Sarah M.",
+    rating: 5,
+    text: "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.",
+  },
+  {
+    id: 3,
+    name: "Ethan R.",
+    rating: 5,
+    text: "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+  },
+  {
+    id: 4,
+    name: "Olivia P.",
+    rating: 5,
+    text: "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out.",
+  },
+  {
+    id: 5,
+    name: "Samantha D.",
+    rating: 5,
+    text: "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+  },
+  {
+    id: 6,
+    name: "Sophia L.",
+    rating: 5,
+    text: "Absolutely love their collection! Highly recommend for anyone who values both style and comfort.",
+  },
 ];
 
 function OurHappyCustomers() {
@@ -31,12 +61,13 @@ function OurHappyCustomers() {
     centerPadding: "200px",
     arrows: false,
     responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3, centerMode: true, centerPadding: "60px" } },
-      { breakpoint: 1024, settings: { slidesToShow: 2, centerMode: true, centerPadding: "40px" } },
+      { breakpoint: 1280, settings: { slidesToShow: 3, centerPadding: "40px", centerMode: true } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "20px", centerMode: true } },
       { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" } },
       { breakpoint: 480, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px", arrows: false } },
     ],
   };
+
 
   return (
     <section className="relative mb-10">
