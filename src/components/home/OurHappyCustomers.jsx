@@ -46,46 +46,38 @@ text: "Absolutely love their collection! Highly recommend for anyone who values 
 ];
 
 function OurHappyCustomers() {
+
   const sliderRef = useRef(null);
-  const [mounted, setMounted] = useState(false);
+
+  const [sliderSettings, setSliderSettings] = useState({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "500px",
+    infinite: true,
+    speed: 600,
+    arrows: false,
+  });
 
   useEffect(() => {
-    setMounted(true);
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width >= 1200) {
+        setSliderSettings({ ...sliderSettings, slidesToShow: 5, centerMode: true, centerPadding: "0px" });
+      } else if (width >= 768) {
+        setSliderSettings({ ...sliderSettings, slidesToShow: 2, centerMode: false, centerPadding: "0px" });
+      } else {
+        setSliderSettings({ ...sliderSettings, slidesToShow: 1, centerMode: false, centerPadding: "0px" });
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-const settings = {
-  infinite: reviews.length > 1,
-  speed: 600,
-   slidesToShow: 1,
-  slidesToScroll: 1,
-  centerMode: true,
-  centerPadding: "0px",
-  arrows: false,
-  responsive: [
-    {
-      breakpoint: 2560,
-      settings: { slidesToShow: Math.min(5, reviews.length), centerMode: true, centerPadding: "0px" },
-    },
-    
-    {
-      breakpoint: 1280,
-      settings: { slidesToShow: Math.min(3, reviews.length), centerMode: true, centerPadding: "0px" },
-    },
-    {
-      breakpoint: 1024,
-      settings: { slidesToShow: Math.min(2, reviews.length), centerMode: true, centerPadding: "0px" },
-    },
-    {
-      breakpoint: 768,
-      settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" }, // Mobile portrait
-    },
-    {
-      breakpoint: 480,
-      settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" }, // Small mobile
-    },
-  ],
-};
-
+  if (!sliderSettings) return null;
 
   return (
     <section className="relative mb-10">
@@ -93,26 +85,18 @@ const settings = {
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
           OUR HAPPY CUSTOMERS
         </h2>
-        {mounted && reviews.length > 1 && (
-          <div className="flex items-center space-x-1 ml-2">
-            <button
-              onClick={() => sliderRef.current?.slickPrev()}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
-            >
-              <FaArrowLeft />
-            </button>
-            <button
-              onClick={() => sliderRef.current?.slickNext()}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
-            >
-              <FaArrowRight />
-            </button>
-          </div>
-        )}
+        <div className="flex items-center space-x-1 ml-2">
+          <button onClick={() => sliderRef.current?.slickPrev()} className="inline-flex items-center justify-center h-9 w-9 text-2xl rounded-md hover:bg-gray-200">
+            <FaArrowLeft />
+          </button>
+          <button onClick={() => sliderRef.current?.slickNext()} className="inline-flex items-center justify-center h-9 w-9 text-2xl rounded-md hover:bg-gray-200">
+            <FaArrowRight />
+          </button>
+        </div>
       </div>
 
       <div className="relative overflow-hidden">
-        <Slider ref={sliderRef} {...settings} className="overflow-visible">
+        <Slider ref={sliderRef} {...sliderSettings} className="overflow-visible">
           {reviews.map((review) => (
             <div key={review.id} className="px-2 sm:px-3 w-full">
               <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full max-w-full">
@@ -127,13 +111,9 @@ const settings = {
           ))}
         </Slider>
 
-        {/* Overlays only for desktop */}
-        {reviews.length > 1 && (
-          <>
-            <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-            <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-          </>
-        )}
+        {/* Overlays for desktop */}
+        <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[240px] backdrop-blur-[2px] bg-white/5 z-10" />
+        <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[300px] backdrop-blur-[2px] bg-white/5 z-10" />
       </div>
     </section>
   );
