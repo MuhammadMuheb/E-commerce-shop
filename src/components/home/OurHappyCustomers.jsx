@@ -59,33 +59,47 @@ const settings = {
   infinite: true,
   speed: 600,
   slidesToShow: 3,
-  centerMode: true, 
-  centerPadding: "214px", 
+  centerMode: true,
+  centerPadding: "214px",
   arrows: false,
   responsive: [
-    { breakpoint: 1280, settings: { slidesToShow: 3, centerPadding: "60px" } },
-    { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "40px" } },
-    { breakpoint: 640, settings: { slidesToShow: 1, centerPadding: "0px" } },
+    {
+      breakpoint: 1280,
+      settings: { slidesToShow: 3, centerPadding: "60px", centerMode: true },
+    },
+    {
+      breakpoint: 1024,
+      settings: { slidesToShow: 2, centerPadding: "40px", centerMode: true },
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" }, // ✅
+    },
+    {
+      breakpoint: 640,
+      settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" }, // ✅
+    },
   ],
 };
+
 
   return (
     <div className="relative mb-6 md:mb-9 lg:mb-12 xl:mb-16 2xl:mb-20">
       {/* Heading + Arrows */}
       <div className="flex justify-between px-4 xl:px-0 mb-6 md:mb-10 max-w-[1240px] mx-auto">
-        <h2 className="leading-[36px] md:text-5xl capitalize text-[35px] font-integral font-[900]">
+        <h2 className="leading-[30px] md:text-4xl capitalize text-[30px] font-integral font-[900]">
           OUR HAPPY CUSTOMERS
         </h2>
         <div className="flex items-center space-x-2">
           <button
             onClick={() => sliderRef.current.slickPrev()}
-            className="h-9 w-9 flex items-center justify-center rounded-md text-2xl hover:bg-gray-100"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={() => sliderRef.current.slickNext()}
-            className="h-9 w-9 flex items-center justify-center rounded-md text-2xl hover:bg-gray-100"
+            className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 w-9 text-2xl"
           >
             <FaArrowRight />
           </button>
@@ -109,14 +123,13 @@ const settings = {
           ))}
         </Slider>
 
-{/* Left light blur overlay */}
-<div className="pointer-events-none absolute left-0 top-0 h-full w-[220px] 
-                backdrop-blur-[2px] bg-white/5 z-10" />
+        {/* Left light blur overlay */}
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-[80px] sm:w-[150px] lg:w-[220px] 
+                        backdrop-blur-[2px] bg-white/5 z-10" />
 
-{/* Right light blur overlay */}
-<div className="pointer-events-none absolute right-0 top-0 h-full w-[220px] 
-                backdrop-blur-[2px] bg-white/5 z-10" />
-
+        {/* Right light blur overlay */}
+        <div className="pointer-events-none absolute right-0 top-0 h-full w-[80px] sm:w-[150px] lg:w-[220px] 
+                        backdrop-blur-[2px] bg-white/5 z-10" />
       </div>
     </div>
   );

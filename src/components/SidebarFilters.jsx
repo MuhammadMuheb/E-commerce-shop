@@ -69,7 +69,7 @@ function SidebarFilters({ isSidebarOpen, onClose }) {
         <span className="font-bold text-black text-xl">Filters</span>
         <BsSliders2Vertical
           onClick={onClose}
-          className="text-2xl text-black/40 cursor-pointer md:hidden"
+          className="text-2xl text-black/40 cursor-pointer "
         />
       </div>
       <hr className="border-t-black/10" />

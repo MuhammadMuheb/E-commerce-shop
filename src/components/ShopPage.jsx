@@ -71,8 +71,8 @@ const ShopPage = () => {
           md:static md:translate-x-0`}
         >
           <SidebarFilters
-  isSidebarOpen={isSidebarOpen}   // ✅ ये important है
-  onClose={() => setIsSidebarOpen(false)}
+  isSidebarOpen={isSidebarOpen}   
+    onClose={() => setIsSidebarOpen(false)}
 />
 
         </div>
