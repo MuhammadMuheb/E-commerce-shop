@@ -62,17 +62,16 @@ function OurHappyCustomers() {
     arrows: false,
     responsive: [
       { breakpoint: 1280, settings: { slidesToShow: 3, centerPadding: "40px", centerMode: true } },
-      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "20px", centerMode: true } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "30px", centerMode: true } },
       { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" } },
       { breakpoint: 480, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px", arrows: false } },
     ],
   };
 
-
   return (
-    <section className="relative mb-10">
+    <section className="relative mb-10 max-w-[1240px] mx-auto px-4">
       {/* Heading + Arrows */}
-      <div className="flex justify-between items-center px-4 max-w-[1240px] mx-auto mb-6">
+      <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
           OUR HAPPY CUSTOMERS
         </h2>
@@ -111,7 +110,7 @@ function OurHappyCustomers() {
           ))}
         </Slider>
 
-        {/* Overlays only for desktop */}
+        {/* Desktop Overlays */}
         <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
         <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
       </div>
