@@ -63,9 +63,11 @@ function OurHappyCustomers() {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width >= 1200) {
+      if (width >= 1300) {
         setSliderSettings({ ...sliderSettings, slidesToShow: 5, centerMode: true, centerPadding: "0px" });
-      } else if (width >= 768) {
+      } else if (width >= 1200) {
+           setSliderSettings({ ...sliderSettings, slidesToShow: 3, centerMode: true, centerPadding: "0px" });
+      }else if (width >= 768) {
         setSliderSettings({ ...sliderSettings, slidesToShow: 2, centerMode: false, centerPadding: "0px" });
       } else {
         setSliderSettings({ ...sliderSettings, slidesToShow: 1, centerMode: false, centerPadding: "0px" });
