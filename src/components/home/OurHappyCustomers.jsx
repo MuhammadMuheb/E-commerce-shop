@@ -95,29 +95,20 @@ return (
     {/* Slider */}
     <div className="relative overflow-hidden">
     <div className="flex-ml-4">
-    <Slider
-    ref={sliderRef}
-    {...settings}
-    className="overflow-visible"
-    >
-    {reviews.map((review) => (
-        <div key={review.id} className="px-2 sm:px-3 w-full">
-        <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px] w-full">
-            <Rating
-            name="read-only"
-            value={review.rating}
-            readOnly
-            className="text-yellow-400"
-            />
-            <div className="flex items-center mt-3">
-            <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
-            <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
-            </div>
-            <p className="text-sm sm:text-base mt-2 text-black/70">{review.text}</p>
+    <Slider ref={sliderRef} {...settings} className="overflow-visible">
+  {reviews.map((review) => (
+    <div key={review.id} className="px-2 sm:px-3 w-full">
+      <div className="bg-white border border-black/10 rounded-2xl p-4 sm:p-6 flex flex-col justify-between min-h-[260px] w-full max-w-full">
+        <Rating name="read-only" value={review.rating} readOnly className="text-yellow-400" />
+        <div className="flex items-center mt-3">
+          <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
+          <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
         </div>
-        </div>
-    ))}
-    </Slider>
+        <p className="text-sm sm:text-base mt-2 text-black/70">{review.text}</p>
+      </div>
+    </div>
+  ))}
+</Slider>
 
     {/* Overlays only for desktop */}
     <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
