@@ -69,7 +69,11 @@ function OurHappyCustomers() {
         settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
       },
       {
-        breakpoint: 640,
+        breakpoint: 480, 
+        settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
+      },
+      {
+        breakpoint: 350,
         settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" },
       },
     ],
@@ -102,10 +106,7 @@ function OurHappyCustomers() {
       <div className="relative">
         <Slider ref={sliderRef} {...settings}>
           {reviews.map((review) => (
-            <div
-              key={review.id}
-              className="px-2 sm:px-3 min-w-0 w-full max-w-full"
-            >
+            <div key={review.id} className="px-2 sm:px-3 w-full">
               <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px]">
                 <Rating
                   name="read-only"
@@ -129,8 +130,8 @@ function OurHappyCustomers() {
         </Slider>
 
         {/* Overlays only for desktop */}
-        <div className="hidden md:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-        <div className="hidden md:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
+        <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
+        <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
       </div>
     </section>
   );
