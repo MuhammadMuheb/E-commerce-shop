@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { FaCheckCircle, FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Rating from "@mui/material/Rating";
-import Slider from "react-slick";
+// import Rating from "@mui/material/Rating";
+// import Slider from "react-slick";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 const reviews = [
   {
@@ -53,25 +53,11 @@ function OurHappyCustomers() {
     setMounted(true);
   }, []);
 
-  const settings = {
-    infinite: true,
-    speed: 600,
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: "200px",
-    arrows: false,
-    responsive: [
-      { breakpoint: 1280, settings: { slidesToShow: 3, centerPadding: "40px", centerMode: true } },
-      { breakpoint: 1024, settings: { slidesToShow: 2, centerPadding: "30px", centerMode: true } },
-      { breakpoint: 768, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px" } },
-      { breakpoint: 480, settings: { slidesToShow: 1, centerMode: false, centerPadding: "0px", arrows: false } },
-    ],
-  };
 
   return (
-    <section className="relative mb-10 max-w-[1240px] mx-auto px-4">
+    <section className="relative mb-10">
       {/* Heading + Arrows */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center px-4 max-w-[1240px] mx-auto mb-6">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold capitalize">
           OUR HAPPY CUSTOMERS
         </h2>
@@ -93,27 +79,8 @@ function OurHappyCustomers() {
         )}
       </div>
 
-      {/* Slider */}
-      <div className="relative">
-        <Slider ref={sliderRef} {...settings}>
-          {reviews.map((review) => (
-            <div key={review.id} className="px-2 sm:px-3 w-full">
-              <div className="bg-white border border-black/10 rounded-2xl p-5 sm:p-6 flex flex-col justify-between min-h-[260px]">
-                <Rating name="read-only" value={review.rating} readOnly className="text-yellow-400" />
-                <div className="flex items-center mt-3">
-                  <strong className="text-black sm:text-lg md:text-xl mr-2">{review.name}</strong>
-                  <FaCheckCircle className="text-[#01AB31] text-lg sm:text-xl" />
-                </div>
-                <p className="text-sm sm:text-base mt-2 text-black/70">{review.text}</p>
-              </div>
-            </div>
-          ))}
-        </Slider>
 
-        {/* Desktop Overlays */}
-        <div className="hidden lg:block pointer-events-none absolute left-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-        <div className="hidden lg:block pointer-events-none absolute right-0 top-0 h-full w-[150px] lg:w-[220px] backdrop-blur-[2px] bg-white/5 z-10" />
-      </div>
+    
     </section>
   );
 }
