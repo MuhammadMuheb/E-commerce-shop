@@ -10,14 +10,14 @@ import { CartProvider } from "react-use-cart";
 
 function App() {
   return (
-    <CartProvider> 
-      <Router>
+    <CartProvider>
+      <Router>  
         <Routes>
           <Route path="/" element={<EchoLayout />}>
             <Route path="home" element={<Home />} />
             <Route path="shoppage" element={<ShopPage />} />
             <Route path="shoppingCart" element={<ShoppingCart />} />
-            <Route path="/product/:id" element={<ProductDetailPage />} />
+            <Route path="product/:id" element={<ProductDetailPage />} />
             <Route path="yourcart" element={<YourCart />} />
           </Route>
         </Routes>
